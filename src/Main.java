@@ -1,10 +1,10 @@
 public class Main {
 
     public static void main(String[] args) {
-        printSum(8, 11);
-        printChar('G');
-        printSumInteger(12, 24);
-        printCharacter('W');
+        Integer sumResult = printSum(8, 11);
+        Character charResult = printChar('G');
+        Integer sumIntegerResult = printSumInteger(12, 24);
+        Character charWrapperResult = printCharacter('W');
 
         int intValue = 42;
         double doubleValue = 3.14;
@@ -18,18 +18,21 @@ public class Main {
         System.out.println("The value of double is: " + doubleWrapper);
         System.out.println("The value of char is: " + charWrapper);
 
-
+        System.out.println("Returned sum result: " + sumResult);
+        System.out.println("Returned char result: " + charResult);
+        System.out.println("Returned sum integer result: " + sumIntegerResult);
+        System.out.println("Returned char wrapper result: " + charWrapperResult);
     }
-    public static void printSum(int a, int b) {
-        System.out.println("Sum: " + (a + b));
+    public static Integer printSum(int a, int b) {
+        return a + b;
     }
-    public static void printChar(char c) {
-        System.out.println("Character: " + c);
+    public static Character printChar(char c) {
+        return c;
     }
-    public static void printSumInteger(Integer x, Integer y) {
-        System.out.println("Sum Integer: " + (x + y));
+    public static Integer printSumInteger(Integer x, Integer y) {
+        return x + y;
     }
-    public static void printCharacter(Character ch) {
-        System.out.println("Character: " + ch);
+    public static Character printCharacter(Character ch) {
+        return ch;
     }
 }
